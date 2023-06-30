@@ -35,6 +35,10 @@ public class FactsList  extends AppCompatActivity {
             performSearch(query);
         });
 
+      //  Intent intent = getIntent();
+       // String str = intent.getStringExtra("subtopic_key");
+        // editTextSearch.setText(str);
+       // performSearch(str);
         RecyclerView rv = findViewById(R.id.recyclerviewFacts);
         factList = new ArrayList<>();
         AddFacts();

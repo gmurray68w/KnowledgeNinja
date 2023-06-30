@@ -13,19 +13,32 @@
         android:theme="@style/Theme.KnowledgeNinja"
         tools:targetApi="31">
         <activity
+            android:name=".SubtopicMenu"
+            android:exported="false" />
+        <activity
             android:name=".InformationActivity"
             android:exported="false"
             android:label="@string/title_activity_information"
             android:theme="@style/Theme.KnowledgeNinja.NoActionBar" />
         <activity
-            android:name=".FactsList"
-            android:exported="true">
+            android:name=".Data"
+            android:exported="false"
+            android:label="Data"
+            android:theme="@style/Theme.KnowledgeNinja.NoActionBar" />
+        <activity
+            android:name=".MainMenu"
+            android:exported="true"
+            android:label="MainMenu"
+            android:theme="@style/Theme.KnowledgeNinja.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".FactsList"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
