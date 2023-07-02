@@ -1,6 +1,7 @@
 package com.example.knowledgeninja;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,8 @@ public class InformationActivity extends AppCompatActivity {
     TextView factText, informationTitle;
     ImageView resourceImage, nextButton1, prevButton1, playSound;
     int factInt;
+    String factName, factFact;
+    int imageLocation;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityInformationBinding binding;
 
@@ -131,6 +134,14 @@ public class InformationActivity extends AppCompatActivity {
         });
         factInt = 1;
         //Find variables
+        Intent intent= getIntent();
+        //Get extras from what user previously selected
+        factName = intent.getStringExtra("factName_key");
+        factFact = intent.getStringExtra("fact_key");
+        imageLocation = intent.getIntExtra("imageLocation_key", 0);
+
+
+
         factText = (TextView)findViewById(R.id.textViewFactText);
         informationTitle = (TextView)findViewById(R.id.textViewInformationTitle);
         playSound= (ImageView) findViewById(R.id.imageViewPlaySound);
@@ -138,6 +149,11 @@ public class InformationActivity extends AppCompatActivity {
         nextButton1 = (ImageView) findViewById(R.id.imageViewNext);
         prevButton1 = (ImageView)findViewById(R.id.imageViewPrevious);
 
+        //Bind from prev. selection
+        informationTitle.setText(factName);
+        factText.setText(factFact);
+        Toast.makeText(InformationActivity.this,"Image is located at:" + imageLocation, Toast.LENGTH_LONG).show();
+        resourceImage.setImageResource(imageLocation);
 
         playSound.setOnClickListener(new View.OnClickListener() {
             @Override

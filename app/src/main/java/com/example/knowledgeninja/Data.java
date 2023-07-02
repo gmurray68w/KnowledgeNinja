@@ -1,6 +1,8 @@
 package com.example.knowledgeninja;
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -9,8 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.knowledgeninja.R;
 
-public class Data extends AppCompatActivity
-{
+public class Data extends AppCompatActivity implements View.OnClickListener {
 
     TextView testPage;
     TextView textViewA;
@@ -19,6 +20,7 @@ public class Data extends AppCompatActivity
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
+    String choice = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -89,6 +91,42 @@ public class Data extends AppCompatActivity
             textViewB.setText(R.string.mikey_leo_donny_ralf);
             textViewC.setText(R.string.wood_stock);
         }
+
+        imageView1.setOnClickListener(this);
+        imageView2.setOnClickListener(this);
+        imageView3.setOnClickListener(this);
+        textViewA.setOnClickListener(this);
+        textViewB.setOnClickListener(this);
+        textViewC.setOnClickListener(this);
+    }
+    @SuppressLint("NonConstantResourceId")
+    @Override
+    public void onClick(View view){
+
+
+
+        if (view.getId() == R.id.imageView1) {
+            choice = textViewA.getText().toString();
+        } else if (view.getId() == R.id.imageView2) {
+            choice = textViewB.getText().toString();
+        } else if (view.getId() == R.id.imageView3) {
+            choice = textViewC.getText().toString();
+        } else if (view.getId() == R.id.textViewA) {
+            choice = textViewA.getText().toString();
+        } else if (view.getId() == R.id.textViewB) {
+            choice = textViewB.getText().toString();
+        } else if (view.getId() == R.id.textViewC) {
+            choice = textViewC.getText().toString();
+        }
+
+        Intent intent = new Intent(Data.this, FactsList.class);
+        intent.putExtra("choice_key", choice);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 }
 

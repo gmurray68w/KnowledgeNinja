@@ -40,9 +40,12 @@ public class FactAdapter extends RecyclerView.Adapter<FactAdapter.FactViewHolder
         holder.factName.setText(fact.getFactName());
 
         holder.actionButton.setOnClickListener(view -> {
-            String str = fact.getFactName();
+            String strFactName = fact.getFactName();
+
             Intent intent = new Intent(context, InformationActivity.class);
-            intent.putExtra("message_key", str);
+            intent.putExtra("factName_key", strFactName);
+            intent.putExtra("fact_key", context.getString(fact.getFactFact()));
+            intent.putExtra("imageLocation_key", fact.getFactImage());
             context.startActivity(intent);
         });
 

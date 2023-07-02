@@ -79,5 +79,117 @@
     <string name="mikey_leo_donny_ralf">Art History</string>
     <string name="wood_stock">Musical History</string>
     <string name="content_description_test_images">Test Image</string>
-    <string name="test_text"></string>
+
+    <string name="space_technology_fact">Space technology has led to significant advancements in satellite communication and exploration.</string>
+    <string name="comet_fact">Comets are celestial bodies composed of ice, dust, and rocky material.</string>
+
+    <!-- Nature - Trees -->
+    <string name="oak_tree_fact">Oak trees are known for their strength and longevity, with some species living for hundreds of years.</string>
+    <string name="maple_tree_fact">Maple trees are famous for their vibrant autumn foliage and the production of maple syrup.</string>
+    <string name="pine_tree_fact">Pine trees are evergreen trees that have adapted to various climates around the world.</string>
+
+    <!-- Nature - Flowers -->
+    <string name="rose_flower_fact">Roses are often associated with love and beauty, and they come in a wide range of colors and fragrances.</string>
+    <string name="sunflower_fact">Sunflowers are known for their tall stature and large, yellow flower heads that track the movement of the sun.</string>
+    <string name="tulip_fact">Tulips are spring-blooming flowers that are available in many colors and are popular for their elegant shape.</string>
+
+    <!-- Nature - Seasons -->
+    <string name="spring_season_fact">Spring is a season of renewal and growth, characterized by blooming flowers and warmer temperatures.</string>
+    <string name="summer_season_fact">Summer is the warmest season, typically associated with vacations, outdoor activities, and longer daylight hours.</string>
+    <string name="autumn_season_fact">Autumn, also known as fall, is marked by colorful foliage, harvest festivals, and cooler temperatures.</string>
+    <string name="winter_season_fact">Winter is the coldest season, often featuring snow, ice, and holiday celebrations.</string>
+
+    <string name="mammal1">Lion</string>
+    <string name="mammal1_fact">Lions are known as the "king of the jungle" and are social animals that live in prides.</string>
+
+    <string name="mammal2">Elephant</string>
+    <string name="mammal2_fact">Elephants are the largest land animals and have a highly developed social structure.</string>
+
+    <string name="mammal3">Dolphin</string>
+    <string name="mammal3_fact">Dolphins are highly intelligent marine mammals known for their playful behavior and exceptional swimming abilities.</string>
+
+    //Animals
+    <!-- Reptiles -->
+    <string name="reptile1">Snake</string>
+    <string name="snake_fact">Snakes are limbless reptiles with unique adaptations such as venomous fangs or constriction techniques to capture and consume prey.</string>
+
+    <string name="reptile2">Lizard</string>
+    <string name="lizard_fact">Lizards are a diverse group of reptiles with scaly skin and the ability to regrow their tails.</string>
+
+    <string name="reptile3">Turtle</string>
+    <string name="turtle_fact">Turtles are shelled reptiles that have been around for millions of years and are known for their longevity.</string>
+
+    <!-- Birds -->
+    <string name="bird1">Eagle</string>
+    <string name="rthawk_fact">Hawks are large birds of prey known for their powerful beaks, keen eyesight, and impressive flying abilities.</string>
+
+    <string name="bird2">Hummingbird</string>
+    <string name="hummingbird_fact">Hummingbirds are tiny birds capable of hovering in mid-air and have the highest metabolism of any warm-blooded animal.</string>
+
+    <string name="bird3">Owl</string>
+    <string name="owl_fact">Owls are nocturnal birds with exceptional hearing and silent flight, allowing them to hunt effectively at night.</string>
+
+    //Technology
+    <!-- AI -->
+    <string name="ai1">Artificial Intelligence (AI)</string>
+    <string name="ai1_fact">AI refers to the simulation of human intelligence in machines that are programmed to think, learn, and problem-solve like humans.</string>
+
+    <string name="ai2">Machine Learning</string>
+    <string name="ai2_fact">Machine Learning is a subset of AI that focuses on developing algorithms and models that allow computers to learn and make predictions or decisions based on data.</string>
+
+    <string name="ai3">Natural Language Processing (NLP)</string>
+    <string name="ai3_fact">NLP is a branch of AI that deals with the interaction between computers and human language, enabling computers to understand, interpret, and respond to human language.</string>
+
+    <!-- Robotics -->
+    <string name="robotics1">Robotics</string>
+    <string name="robotics1_fact">Robotics is a field of study and engineering that focuses on designing, building, and programming robots to perform various tasks or functions autonomously or under human control.</string>
+
+    <string name="robotics2">Industrial Robots</string>
+    <string name="robotics2_fact">Industrial robots are specifically designed for manufacturing and industrial applications, performing tasks such as assembly, welding, painting, and material handling in factories.</string>
+
+    <string name="robotics3">Humanoid Robots</string>
+    <string name="robotics3_fact">Humanoid robots are robots that resemble human beings in appearance and behavior, often used in research, entertainment, and assistance roles.</string>
+
+    <!-- Coding -->
+    <string name="coding1">Coding</string>
+    <string name="coding1_fact">Coding, also known as programming, involves writing instructions or code in a programming language to create software, websites, apps, and other digital solutions.</string>
+
+    <string name="coding2">Java</string>
+    <string name="coding2_fact">Java is a popular object-oriented programming language used for developing a wide range of applications, from desktop software to mobile apps and web applications.</string>
+
+    <string name="coding3">Python</string>
+    <string name="coding3_fact">Python is a versatile programming language known for its simplicity and readability, widely used in fields such as data analysis, web development, and artificial intelligence.</string>
+
+//History
+    <!-- American History -->
+    <string name="american_history1">American Revolution</string>
+    <string name="american_history1_fact">The American Revolution was a war fought between Great Britain and thirteen British colonies in North America from 1775 to 1783, resulting in the formation of the United States of America.</string>
+
+    <string name="american_history2">Civil Rights Movement</string>
+    <string name="american_history2_fact">The Civil Rights Movement was a social and political movement in the United States during the mid-20th century that aimed to end racial segregation and discrimination against African Americans.</string>
+
+    <string name="american_history3">Moon Landing</string>
+    <string name="american_history3_fact">On July 20, 1969, Apollo 11 became the first manned mission to land on the moon, with astronauts Neil Armstrong and Buzz Aldrin taking humanitys first steps on the lunar surface.</string>
+
+    <!-- Art History -->
+    <string name="art_history1">Renaissance</string>
+    <string name="art_history1_fact">The Renaissance was a period of great cultural and artistic transformation in Europe from the 14th to the 17th century, marked by renewed interest in classical learning, scientific advancements, and innovative artistic expressions.</string>
+
+    <string name="art_history2">Impressionism</string>
+    <string name="art_history2_fact">Impressionism was an art movement that emerged in the late 19th century, characterized by capturing the fleeting impressions of light and color in nature, often depicted through loose brushwork and emphasis on atmospheric effects.</string>
+
+    <string name="art_history3">Cubism</string>
+    <string name="art_history3_fact">Cubism was an influential art movement pioneered by Pablo Picasso and Georges Braque in the early 20th century, known for its fragmented and abstract representation of objects, challenging traditional perspectives and spatial conventions.</string>
+
+    <!-- Musical History -->
+    <string name="musical_history1">Baroque Period</string>
+    <string name="musical_history1_fact">The Baroque period in music spanned from the late 16th to the early 18th century and was characterized by elaborate compositions, rich ornamentation, and the emergence of key musical forms such as the concerto and the fugue.</string>
+
+    <string name="musical_history2">Jazz</string>
+    <string name="musical_history2_fact">Jazz is an American music genre that originated in the late 19th to early 20th century, characterized by improvisation, syncopated rhythms, and a combination of African and European musical traditions.</string>
+
+    <string name="musical_history3">Rock and Roll</string>
+    <string name="musical_history3_fact">Rock and Roll is a popular music genre that emerged in the United States in the 1950s, blending elements of rhythm and blues, country, and other styles, and becoming a global cultural phenomenon.</string>
+
+
 </resources>
