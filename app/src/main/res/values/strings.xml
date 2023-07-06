@@ -160,7 +160,7 @@
     <string name="coding3">Python</string>
     <string name="coding3_fact">Python is a versatile programming language known for its simplicity and readability, widely used in fields such as data analysis, web development, and artificial intelligence.</string>
 
-//History
+    //History
     <!-- American History -->
     <string name="american_history1">American Revolution</string>
     <string name="american_history1_fact">The American Revolution was a war fought between Great Britain and thirteen British colonies in North America from 1775 to 1783, resulting in the formation of the United States of America.</string>
