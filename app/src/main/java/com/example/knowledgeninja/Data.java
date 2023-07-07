@@ -20,6 +20,7 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
+    ImageView imageGameView;
     String choice = "";
 
     @Override
@@ -35,6 +36,7 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
         textViewA = findViewById(R.id.textViewA);
         textViewB = findViewById(R.id.textViewB);
         textViewC = findViewById(R.id.textViewC);
+        imageGameView = findViewById(R.id.imageGameView);
 
         Intent intent = getIntent();
         String str = intent.getStringExtra("message_key");
@@ -50,6 +52,17 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
             textViewA.setText(R.string.our_solar_sytem);
             textViewB.setText(R.string.apallo_lander);
             textViewC.setText(R.string.hailey_comet);
+            imageGameView.setImageResource(R.drawable.space_game);
+            imageGameView.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    Intent intent = new Intent(Data.this, Games.class);
+                    intent.putExtra("User Selection: ", "Space Games");
+                    startActivity(intent);
+                }
+            });
         }
         else if ("Animals".equals(str))
         {
@@ -128,5 +141,6 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
     public void onPointerCaptureChanged(boolean hasCapture) {
         super.onPointerCaptureChanged(hasCapture);
     }
+
 }
 

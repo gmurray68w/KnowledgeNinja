@@ -13,6 +13,9 @@
         android:theme="@style/Theme.KnowledgeNinja"
         tools:targetApi="31">
         <activity
+            android:name=".Games"
+            android:exported="false" />
+        <activity
             android:name=".CardMatchGame"
             android:exported="false" />
         <activity
