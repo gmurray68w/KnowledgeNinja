@@ -58,8 +58,9 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
                 @Override
                 public void onClick(View view)
                 {
+                    String str = "Card Game";
                     Intent intent = new Intent(Data.this, Games.class);
-                    intent.putExtra("User Selection: ", "Space Games");
+                    intent.putExtra("message_key", str);
                     startActivity(intent);
                 }
             });

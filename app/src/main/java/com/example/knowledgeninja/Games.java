@@ -11,15 +11,16 @@ import android.widget.Toast;
 
 public class Games extends AppCompatActivity
 {
-    ImageView gameView1, gameView2, gameView3, gameView4;
+    ImageView game1, gameView2, gameView3, gameView4;
     TextView gameText;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
 
-        gameView1 = findViewById(R.id.gameView1);
+        game1 = findViewById(R.id.game1);
         gameView2 = findViewById(R.id.gameView2);
         gameView3 = findViewById(R.id.gameView3);
         gameView4 = findViewById(R.id.gameView4);
@@ -32,18 +33,18 @@ public class Games extends AppCompatActivity
 
         if ("Card Game".equals(str))
         {
-            gameText.setText("Space Games");
-            gameView1.setImageResource(R.drawable.space_card_game);
-            //gameView1.setOnClickListener(new View.OnClickListener()
-            //{
-            //    @Override
-            //    public void onClick(View view)
-            //    {
-            //        Intent intent = new Intent(Games.this, CardMatchGame.class);
-            //        intent.putExtra("User Selection: ", "Planet Card Match");
-            //        startActivity(intent);
-            //    }
-            //});
+            gameText.setText(R.string.space_game_tile);
+            game1.setImageResource(R.drawable.space_card_game);
+            game1.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View view)
+                {
+                    Intent intent1 = new Intent(Games.this, CardMatchGame.class);
+                    intent1.putExtra("User Selection:", "Planet Card Match");
+                    startActivity(intent1);
+                }
+            });
         }
     }
 }

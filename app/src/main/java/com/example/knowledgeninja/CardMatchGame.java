@@ -2,6 +2,7 @@ package com.example.knowledgeninja;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CardMatchGame extends AppCompatActivity {
@@ -22,6 +25,16 @@ public class CardMatchGame extends AppCompatActivity {
         setContentView(R.layout.activity_card_match_game);
 
         GridView gridView = findViewById(R.id.gridView);
+
+        List<Card> deck = new ArrayList<>();
+
+        initializeDeck();
+
+        CardAdapter adapter = new CardAdapter(this, deck);
+        gridView.setAdapter(adapter);
+
+        Intent intent = getIntent();
+        String str = intent.getStringExtra("user Selection:");
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
@@ -174,5 +187,17 @@ public class CardMatchGame extends AppCompatActivity {
             }
         }
         return true; //All cards are matched
+    }
+
+    private void initializeDeck()
+    {
+        deck.clear();
+
+        deck.add(new Card(R.drawable.earthimage1));
+        deck.add(new Card(R.drawable.earthimage1));
+        deck.add(new Card(R.drawable.earthimage2));
+        deck.add(new Card(R.drawable.earthimage2));
+
+        Collections.shuffle(deck);
     }
 }
