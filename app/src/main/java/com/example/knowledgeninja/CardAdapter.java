@@ -7,14 +7,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class CardAdapter extends BaseAdapter
 {
-    private Context context;
-    private List<Card> cards;
+    private final Context context;
+    private final List<Card> cards;
 
     public CardAdapter(Context context, List<Card> cards)
     {
@@ -37,35 +36,35 @@ public class CardAdapter extends BaseAdapter
         return position;
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
+    public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
         ViewHolder viewHolder;
 
-        if (view == null)
-        {
+        if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.grid_item_card, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.cardImageView = view.findViewById(R.id.cardImageView);
+            viewHolder.cardBackImageView = view.findViewById(R.id.cardBackImageView);
             view.setTag(viewHolder);
-        }
-        else
-        {
+        } else {
             viewHolder = (ViewHolder) view.getTag();
         }
+
         Card card = cards.get(position);
-        if (card.isFlipped())
-        {
+        if (card.isFlipped()) {
+            viewHolder.cardImageView.setVisibility(View.VISIBLE);
+            viewHolder.cardBackImageView.setVisibility(View.GONE);
             viewHolder.cardImageView.setImageResource(card.getImageResId());
+        } else {
+            viewHolder.cardImageView.setVisibility(View.GONE);
+            viewHolder.cardBackImageView.setVisibility(View.VISIBLE);
         }
-        else
-        {
-            viewHolder.cardImageView.setImageResource(R.drawable.card_back);
-        }
+
         return view;
     }
     private static class ViewHolder
     {
         ImageView cardImageView;
+        ImageView cardBackImageView;
     }
 }

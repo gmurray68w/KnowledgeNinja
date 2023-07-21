@@ -1,5 +1,6 @@
 package com.example.knowledgeninja;
 
+import com.example.knowledgeninja.Card;
 import com.example.knowledgeninja.CardMatchGame;
 import java.util.ArrayList;
 import java.util.Collections;

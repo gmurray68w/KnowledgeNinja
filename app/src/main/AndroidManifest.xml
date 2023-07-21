@@ -17,7 +17,7 @@
             android:exported="false" />
         <activity
             android:name=".CardMatchGame"
-            android:exported="false" />
+            android:label="Card Match Game" />
         <activity
             android:name=".SubtopicMenu"
             android:exported="false" />

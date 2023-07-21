@@ -19,80 +19,104 @@ public class CardMatchGame extends AppCompatActivity {
     private List<Card> flippedCards;
     private GridView gridView;
 
+    private CardAdapter cardAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_match_game);
 
-        GridView gridView = findViewById(R.id.gridView);
+        gridView = findViewById(R.id.gridView);
 
-        List<Card> deck = new ArrayList<>();
+        deck = new ArrayList<>();
+        flippedCards = new ArrayList<>();
 
         initializeDeck();
 
-        CardAdapter adapter = new CardAdapter(this, deck);
-        gridView.setAdapter(adapter);
+        cardAdapter = new CardAdapter(this, deck);
+        gridView.setAdapter(cardAdapter);
 
         Intent intent = getIntent();
         String str = intent.getStringExtra("user Selection:");
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id)
-            {
-                flipCard(position);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                flipCard(view, position);
             }
         });
-
     }
 
-    private void flipCard(int position)
+    private void initializeDeck()
     {
+        deck.clear();
+
+        flippedCards  = new ArrayList<>();
+
+        deck.add(new Card(R.drawable.earthimage1));
+        deck.add(new Card(R.drawable.earthimage1));
+        deck.add(new Card(R.drawable.jupiter));
+        deck.add(new Card(R.drawable.jupiter));
+        deck.add(new Card(R.drawable.mars));
+        deck.add(new Card(R.drawable.mars));
+        deck.add(new Card(R.drawable.mercury));
+        deck.add(new Card(R.drawable.mercury));
+        deck.add(new Card(R.drawable.neptune));
+        deck.add(new Card(R.drawable.neptune));
+        deck.add(new Card(R.drawable.saturn));
+        deck.add(new Card(R.drawable.saturn));
+        deck.add(new Card(R.drawable.uranus));
+        deck.add(new Card(R.drawable.uranus));
+        deck.add(new Card(R.drawable.venus));
+        deck.add(new Card(R.drawable.venus));
+
+        Collections.shuffle(deck);
+    }
+
+    private void flipCard(View view, int position) {
         Card card = deck.get(position);
 
-        if (!card.isMatched())
-        {
-            if (!card.isFlipped())
-            {
+        if (!card.isMatched()) {
+            if (!card.isFlipped()) {
                 // Flip the card
                 card.setFlipped(true);
                 updateCardView(position);
 
                 // Check if two cards are flipped for comparison
-                if (flippedCards.size() < 2)
-                {
+                if (flippedCards.size() < 2) {
                     flippedCards.add(card);
 
-                    if (flippedCards.size() == 2)
-                    {
+                    if (flippedCards.size() == 2) {
                         // Two cards are flipped, compare them
                         compareCards();
                         checkMatch();
                     }
                 }
-            }
-            else
-            {
+            } else {
                 // Card is already flipped, do nothing
             }
         }
     }
 
-    private void updateCardView(int position)
-    {
+    private void updateCardView(int position) {
         Card card = deck.get(position);
 
         // Update the card view based on the card's flipped state
         View cardView = gridView.getChildAt(position);
-        ImageView imageView = cardView.findViewById(R.id.cardImageView);
+        if (cardView != null) {
+            ImageView imageView = cardView.findViewById(R.id.cardImageView);
+            ImageView cardBackImageView = cardView.findViewById(R.id.cardBackImageView);
 
-        if (card.isFlipped()) {
-            //Set the card image when it is flipped
-            imageView.setImageResource(card.getImageResId());
-        } else {
-            //Set a default image for the card when it is face-down
-            imageView.setImageResource(R.drawable.card_back);
+            if (card.isFlipped()) {
+                // Card is flipped, show the front image and hide the card back image
+                imageView.setVisibility(View.VISIBLE);
+                cardBackImageView.setVisibility(View.GONE);
+                imageView.setImageResource(card.getImageResId());
+            } else {
+                // Card is face-down, show the card back image and hide the front image
+                imageView.setVisibility(View.GONE);
+                cardBackImageView.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -101,33 +125,27 @@ public class CardMatchGame extends AppCompatActivity {
         Card firstCard = flippedCards.get(0);
         Card secondCard = flippedCards.get(1);
 
-        if (firstCard.getImageResId() == secondCard.getImageResId())
-        {
-            //Cards are a match
+        if (firstCard.getImageResId() == secondCard.getImageResId()) {
+            // Cards are a match
             firstCard.setMatched(true);
             secondCard.setMatched(true);
 
-            //Perform any additional actions for a match
+            // Perform any additional actions for a match
 
-        }
-        else
-        {
-            //Cards do not match flip them back face-down after a short delay
+        } else {
+            // Cards do not match, flip them back face-down after a short delay
             Handler handler = new Handler();
-            handler.postDelayed(new Runnable()
-            {
+            handler.postDelayed(new Runnable() {
                 @Override
-                public void run()
-                {
+                public void run() {
                     firstCard.setFlipped(false);
                     secondCard.setFlipped(false);
                     updateCardView(deck.indexOf(firstCard));
                     updateCardView(deck.indexOf(secondCard));
                 }
-            }, 1000); //Adjust the delay duration as needed
+            }, 1000); // Adjust the delay duration as needed
         }
-
-        //Clear the flipped cards list
+        // Clear the flipped cards list
         flippedCards.clear();
     }
 
@@ -187,17 +205,5 @@ public class CardMatchGame extends AppCompatActivity {
             }
         }
         return true; //All cards are matched
-    }
-
-    private void initializeDeck()
-    {
-        deck.clear();
-
-        deck.add(new Card(R.drawable.earthimage1));
-        deck.add(new Card(R.drawable.earthimage1));
-        deck.add(new Card(R.drawable.earthimage2));
-        deck.add(new Card(R.drawable.earthimage2));
-
-        Collections.shuffle(deck);
     }
 }
