@@ -38,7 +38,7 @@ public class FactsList  extends AppCompatActivity {
 
         Intent intent = getIntent();
         String choice = intent.getStringExtra("choice_key");
- //       editTextSearch.setText(choice);
+        editTextSearch.setText(choice);
 
 
         factList = new ArrayList<>();
