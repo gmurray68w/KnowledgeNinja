@@ -79,7 +79,6 @@
     <string name="mikey_leo_donny_ralf">Art History</string>
     <string name="wood_stock">Musical History</string>
     <string name="content_description_test_images">Test Image</string>
-    <string name="space_game_tile">Space Games</string>
 
     <string name="space_technology_fact">Space technology has led to significant advancements in satellite communication and exploration.</string>
     <string name="comet_fact">Comets are celestial bodies composed of ice, dust, and rocky material.</string>
@@ -161,7 +160,7 @@
     <string name="coding3">Python</string>
     <string name="coding3_fact">Python is a versatile programming language known for its simplicity and readability, widely used in fields such as data analysis, web development, and artificial intelligence.</string>
 
-    //History
+//History
     <!-- American History -->
     <string name="american_history1">American Revolution</string>
     <string name="american_history1_fact">The American Revolution was a war fought between Great Britain and thirteen British colonies in North America from 1775 to 1783, resulting in the formation of the United States of America.</string>
@@ -192,5 +191,16 @@
     <string name="musical_history3">Rock and Roll</string>
     <string name="musical_history3_fact">Rock and Roll is a popular music genre that emerged in the United States in the 1950s, blending elements of rhythm and blues, country, and other styles, and becoming a global cultural phenomenon.</string>
 
-
+    <string-array name="random_facts">
+        <item> On July 20, 1969, Apollo 11 became the first manned mission to land on the moon, with astronauts Neil Armstrong and Buzz Aldrin taking humanitys first steps on the lunar surface.</item>
+    <item>Rock and Roll is a popular music genre that emerged in the United States in the 1950s, blending elements of rhythm and blues, country, and other styles, and becoming a global cultural phenomenon.</item>
+        <item>Python is a versatile programming language known for its simplicity and readability, widely used in fields such as data analysis, web development, and artificial intelligence.</item>
+   <item>AI refers to the simulation of human intelligence in machines that are programmed to think, learn, and problem-solve like humans.</item>
+        <item>Winter is the coldest season, often featuring snow, ice, and holiday celebrations.</item>
+        <item>Owls are nocturnal birds with exceptional hearing and silent flight, allowing them to hunt effectively at night.</item>
+        <item>Dolphins are highly intelligent marine mammals known for their playful behavior and exceptional swimming abilities.</item>
+        <item>Roses are often associated with love and beauty, and they come in a wide range of colors and fragrances.</item>
+        <item>Oak trees are known for their strength and longevity, with some species living for hundreds of years.</item>
+    </string-array>
+    <string name="space_game_tile">Space game</string>
 </resources>

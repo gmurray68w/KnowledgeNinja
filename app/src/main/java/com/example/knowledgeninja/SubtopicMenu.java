@@ -2,7 +2,9 @@ package com.example.knowledgeninja;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -11,6 +13,10 @@ import android.widget.Toast;
 public class SubtopicMenu extends AppCompatActivity {
     TextView topicChosen;
     String str;
+
+    SharedPreferences prefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

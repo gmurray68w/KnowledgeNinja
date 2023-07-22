@@ -1,6 +1,8 @@
 package com.example.knowledgeninja;
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,6 +28,28 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        //SpaceValues
+        boolean checkbox1Value = prefs.getBoolean("checkbox1", false);
+        boolean checkbox2Value = prefs.getBoolean("checkbox2", false);
+        boolean checkbox3Value = prefs.getBoolean("checkbox3", false);
+
+        boolean checkbox4Value = prefs.getBoolean("checkbox4", false);
+        boolean checkbox5Value = prefs.getBoolean("checkbox5", false);
+        boolean checkbox6Value = prefs.getBoolean("checkbox6", false);
+
+        boolean checkbox7Value = prefs.getBoolean("checkbox7", false);
+        boolean checkbox8Value = prefs.getBoolean("checkbox8", false);
+        boolean checkbox9Value = prefs.getBoolean("checkbox9", false);
+
+        boolean checkbox10Value = prefs.getBoolean("checkbox10", false);
+        boolean checkbox11Value = prefs.getBoolean("checkbox11", false);
+        boolean checkbox12Value = prefs.getBoolean("checkbox12", false);
+
+        boolean checkbox13Value = prefs.getBoolean("checkbox13", false);
+        boolean checkbox14Value = prefs.getBoolean("checkbox14", false);
+        boolean checkbox15Value = prefs.getBoolean("checkbox15", false);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_page);
 
@@ -46,6 +70,7 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
         if ("Space".equals(str))
         {
             testPage.setText(R.string.test_page_space);
+
             imageView1.setImageResource(R.drawable.solar_system);
             imageView2.setImageResource(R.drawable.space_technology);
             imageView3.setImageResource(R.drawable.comet);
@@ -64,16 +89,20 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
                     startActivity(intent);
                 }
             });
-        }
-        else if ("Animals".equals(str))
-        {
-            testPage.setText(R.string.test_page_animals);
-            imageView1.setImageResource(R.drawable.mammals);
-            imageView2.setImageResource(R.drawable.reptiles);
-            imageView3.setImageResource(R.drawable.birds);
-            textViewA.setText(R.string.mountain_moose);
-            textViewB.setText(R.string.gator_croc);
-            textViewC.setText(R.string.blue_jay);
+            if(!checkbox1Value){
+                imageView1.setVisibility(View.GONE);
+                textViewA.setVisibility(View.GONE);
+            }
+            if (!checkbox2Value) {
+                    imageView2.setVisibility(View.GONE);
+                    textViewB.setVisibility(View.GONE);
+                }
+
+            if (!checkbox3Value) {
+                imageView3.setVisibility(View.GONE);
+                textViewC.setVisibility(View.GONE);
+            }
+
         }
         else if ("Nature".equals(str))
         {
@@ -84,7 +113,44 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
             textViewA.setText(R.string.mighty_oak);
             textViewB.setText(R.string.water_lily);
             textViewC.setText(R.string.jack_frost);
+            if(!checkbox4Value){
+                imageView1.setVisibility(View.GONE);
+                textViewA.setVisibility(View.GONE);
+            }
+            if (!checkbox5Value) {
+                imageView2.setVisibility(View.GONE);
+                textViewB.setVisibility(View.GONE);
+            }
+
+            if (!checkbox6Value) {
+                imageView3.setVisibility(View.GONE);
+                textViewC.setVisibility(View.GONE);
+            }
         }
+        else if ("Animals".equals(str))
+        {
+            testPage.setText(R.string.test_page_animals);
+            imageView1.setImageResource(R.drawable.mammals);
+            imageView2.setImageResource(R.drawable.reptiles);
+            imageView3.setImageResource(R.drawable.birds);
+            textViewA.setText(R.string.mountain_moose);
+            textViewB.setText(R.string.gator_croc);
+            textViewC.setText(R.string.blue_jay);
+            if(!checkbox7Value){
+                imageView1.setVisibility(View.GONE);
+                textViewA.setVisibility(View.GONE);
+            }
+            if (!checkbox8Value) {
+                imageView2.setVisibility(View.GONE);
+                textViewB.setVisibility(View.GONE);
+            }
+
+            if (!checkbox9Value) {
+                imageView3.setVisibility(View.GONE);
+                textViewC.setVisibility(View.GONE);
+            }
+        }
+
         else if ("Technology".equals(str))
         {
             testPage.setText(R.string.test_page_technology);
@@ -94,6 +160,19 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
             textViewA.setText(R.string.artificial_intel);
             textViewB.setText(R.string.bender_bending_rodriguez);
             textViewC.setText(R.string.android_studio_sucks);
+            if(!checkbox10Value){
+                imageView1.setVisibility(View.GONE);
+                textViewA.setVisibility(View.GONE);
+            }
+            if (!checkbox11Value) {
+                imageView2.setVisibility(View.GONE);
+                textViewB.setVisibility(View.GONE);
+            }
+
+            if (!checkbox12Value) {
+                imageView3.setVisibility(View.GONE);
+                textViewC.setVisibility(View.GONE);
+            }
         }
         else if ("History".equals(str))
         {
@@ -104,6 +183,19 @@ public class Data extends AppCompatActivity implements View.OnClickListener {
             textViewA.setText(R.string.we_the_people);
             textViewB.setText(R.string.mikey_leo_donny_ralf);
             textViewC.setText(R.string.wood_stock);
+            if(!checkbox13Value){
+                imageView1.setVisibility(View.GONE);
+                textViewA.setVisibility(View.GONE);
+            }
+            if (!checkbox14Value) {
+                imageView2.setVisibility(View.GONE);
+                textViewB.setVisibility(View.GONE);
+            }
+
+            if (!checkbox15Value) {
+                imageView3.setVisibility(View.GONE);
+                textViewC.setVisibility(View.GONE);
+            }
         }
 
         imageView1.setOnClickListener(this);

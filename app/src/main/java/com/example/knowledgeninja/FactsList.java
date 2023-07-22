@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +38,7 @@ public class FactsList  extends AppCompatActivity {
 
         Intent intent = getIntent();
         String choice = intent.getStringExtra("choice_key");
-        editTextSearch.setText(choice);
+ //       editTextSearch.setText(choice);
 
 
         factList = new ArrayList<>();
@@ -94,10 +95,6 @@ public class FactsList  extends AppCompatActivity {
         factList.add(factUranus);
         Fact factNeptune = new Fact("Space","Solar System", "Neptune", R.drawable.neptune, R.string.neptune_fact_1);
         factList.add(factNeptune);
-
-
-
-
 
         // Nature Facts
         //Trees
@@ -159,5 +156,20 @@ public class FactsList  extends AppCompatActivity {
         Fact factTurtle = new Fact("Animals","Reptiles", "Turtle", R.drawable.turtle, R.string.turtle_fact);
         factList.add(factTurtle);
 
+        //Coding
+        Fact factSwift = new Fact("Technology", "Coding", "Swift", R.drawable.swift, R.string.coding1_fact);
+        factList.add(factSwift);
+        Fact factJava = new Fact("Technology", "Coding", "JavaScript", R.drawable.java, R.string.coding2_fact);
+        factList.add(factJava);
+        Fact factPython = new Fact("Technology", "Coding", "Swift", R.drawable.python, R.string.coding3_fact);
+        factList.add(factPython);
+
+        //American History
+        Fact factAmerRev = new Fact("History", "American History", "American Revolution", R.drawable.americanrevolution, R.string.american_history1_fact);
+        factList.add(factAmerRev);
+        Fact factCivilRights = new Fact("History", "American History", "Civil Rights Movement", R.drawable.civilrights, R.string.american_history2_fact);
+        factList.add(factCivilRights);
+        Fact factMoonLanding = new Fact("History", "American History", "Moon Landing", R.drawable.moonlanding, R.string.american_history3_fact);
+        factList.add(factMoonLanding);
     }
 }

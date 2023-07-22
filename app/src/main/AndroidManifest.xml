@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -12,12 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowledgeNinja"
         tools:targetApi="31">
-        <activity
-            android:name=".Games"
-            android:exported="false" />
-        <activity
-            android:name=".CardMatchGame"
-            android:label="Card Match Game" />
         <activity
             android:name=".SubtopicMenu"
             android:exported="false" />
@@ -44,7 +39,13 @@
         </activity>
         <activity
             android:name=".FactsList"
-            android:exported="true" />
+            android:exported="true"></activity>
+        <activity
+            android:name=".ParentPortalHome"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Games"
+            android:exported="true"></activity>
     </application>
 
 </manifest>
