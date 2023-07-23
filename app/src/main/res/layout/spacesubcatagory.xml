@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/buttonSpaceExploration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/material_dynamic_tertiary30"
+        android:text="Space Exploration and Human Colonization"
+        app:iconTint="#394DBA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageexoplanet" />
+
+    <Button
+        android:id="@+id/buttonRoleOfSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/material_dynamic_tertiary30"
+        android:text="The Role of Space Technology in Everyday Life"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSpaceExploration"
+        app:layout_constraintVertical_bias="0.476" />
+
+    <Button
+        android:id="@+id/buttonExoplanets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/material_dynamic_tertiary30"
+        android:text="Exoplanets and the Search for Extraterrestrial Life"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageexoplanet"
+        android:layout_width="297dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonExoplanets"
+        app:srcCompat="@drawable/exoplanets" />
+
+    <ImageView
+        android:id="@+id/imagespaceexploration"
+        android:layout_width="297dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonSpaceExploration"
+        app:srcCompat="@drawable/spaceexploration" />
+
+    <ImageView
+        android:id="@+id/imagerole"
+        android:layout_width="297dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonRoleOfSpace"
+        app:srcCompat="@drawable/roleofspace" />
+
+    -<Button
+    android:id="@+id/buttonspacesubcategory"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp"
+    android:text="SpaceSound"
+    app:layout_constraintBottom_toTopOf="@+id/imageexoplanet"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/buttonExoplanets" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

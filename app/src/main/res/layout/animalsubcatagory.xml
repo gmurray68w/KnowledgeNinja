@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InformationActivity">
+
+    <Button
+        android:id="@+id/buttonSpaceExploration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/orange"
+        android:text="Anatomy and Pysiology"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageexoplanet" />
+
+    <Button
+        android:id="@+id/buttonRoleOfSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/orange"
+        android:text="Behavior and Ecology"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSpaceExploration"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <Button
+        android:id="@+id/buttonExoplanets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/orange"
+        android:text="Classification and Taxonomy"
+        app:layout_constraintBottom_toTopOf="@+id/imageexoplanet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageexoplanet"
+        android:layout_width="307dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonExoplanets"
+        app:srcCompat="@drawable/animalclassifications" />
+
+    <ImageView
+        android:id="@+id/imagespaceexploration"
+        android:layout_width="309dp"
+        android:layout_height="247dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonSpaceExploration"
+        app:srcCompat="@drawable/animalanatomy" />
+
+    <ImageView
+        android:id="@+id/imagerole"
+        android:layout_width="307dp"
+        android:layout_height="211dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonRoleOfSpace"
+        app:srcCompat="@drawable/animalbehavior" />
+
+    <resources
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="731dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageexoplanet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </resources>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
