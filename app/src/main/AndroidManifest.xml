@@ -31,6 +31,15 @@
             android:exported="false"
             android:label="Data"
             android:theme="@style/Theme.KnowledgeNinja.NoActionBar" />
+      <activity
+        android:name=".Settings"
+        android:exported="true">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+
+          <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
         <activity
             android:name=".MainMenu"
             android:exported="true"
